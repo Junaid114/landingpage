@@ -21,7 +21,7 @@
   justify-content: start;
   /* flex: 1; */
   gap:20px;
-  min-width: 550px;
+  min-width: 530px;
   min-height: 380px;
   padding: 25px;
   border: 1px solid rgba(176, 25, 76, 1);
