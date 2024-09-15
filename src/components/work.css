@@ -1,0 +1,27 @@
+.image {
+    border: 5px solid #dc1e5e;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+   .work img{
+    display: flex;
+    width: 90%;
+    /* padding-left: 20px; */
+    margin-left: 65px;
+    border: 8px solid #dc1e5e;
+    height: 60%;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    object-fit: cover;
+    /* margin-left: 160px; */
+  }
+
+  h2{
+  color: #fff;
+  margin-left: 130px;
+  font-size: 60px;
+
+  }

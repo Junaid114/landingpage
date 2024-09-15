@@ -1,0 +1,13 @@
+.line-container {
+    position: relative;
+  }
+  
+  .line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #ff00ff; /* Replace with your desired color */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Adjust shadow properties */
+  }
