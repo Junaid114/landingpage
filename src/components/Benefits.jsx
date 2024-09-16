@@ -128,7 +128,7 @@ const Benefits = () => {
 
   return (
     <section
-      className="my-20"
+      className="my-15"
       style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
     >
       <div className="flex gap-7">

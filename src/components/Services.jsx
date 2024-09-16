@@ -85,7 +85,7 @@ const Services = () => {
 
   return (
     <section
-      className="my-20 text-white"
+      className="my-20 text-white  overflow-x-hidden"
       style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
     >
       <div className="flex gap-7">

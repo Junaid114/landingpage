@@ -21,12 +21,12 @@ const LandingPage = () => {
       <main style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}>
         <Hero />
         <Work />
-        <WhyChooseUs />
-        <Benefits />
-        <Process />
-        <Services />
-        <ClientApproach />
-        <ContactForm />
+          <WhyChooseUs />
+       <Benefits />
+       <Process />
+       <Services />
+       <ClientApproach />
+          <ContactForm />
         <FAQ />
       </main>
       <Footer />
