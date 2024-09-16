@@ -3,19 +3,24 @@
  */
 import React from "react";
 import styles from "./Benefits.module.css";
+import Line from "./verticalline/Line";
 
 const BenefitItem = ({ icon, title, descriptions }) => (
-  <div className={styles.benefitItem}  style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}}>
-    <div className={styles.benefitHeader}>
+  <div className="bg-gradient-to-r from-[#dc1e5e] to-black p-6 sm:p-10 rounded-xl text-white">
+    <div className="flex gap-4 mb-5">
       <img loading="lazy" src={icon} alt="" className={styles.benefitIcon} />
-      <h3 className={styles.benefitTitle}>{title}</h3>
+      <h3 className="italic text-xl md:text-2xl  font-bold uppercase">
+        {title}
+      </h3>
     </div>
-    {descriptions.map((desc, index) => (
-      <div key={index} className={styles.benefitDescription}>
-        <h4 className={styles.descriptionTitle}>{desc.title}</h4>
-        <p className={styles.descriptionText}>{desc.text}</p>
-      </div>
-    ))}
+    <div className="flex flex-col gap-4">
+      {descriptions.map((desc, index) => (
+        <div key={index} className="">
+          <h4 className="text-base md:text-lg font-bold">{desc.title}</h4>
+          <p className="text-sm">{desc.text}</p>
+        </div>
+      ))}
+    </div>
   </div>
 );
 
@@ -122,12 +127,24 @@ const Benefits = () => {
   ];
 
   return (
-    <section  style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}} >
-        <h2 className={styles.title}>Benefits of a Custom Website</h2>
-        <div className={styles.benefits}>
-      {benefitsData.map((benefit, index) => (
-        <BenefitItem key={index} {...benefit} />
-      ))}
+    <section
+      className="my-20"
+      style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
+    >
+      <div className="flex gap-7">
+        <Line />
+        <div>
+          <h1 className="p-0 text-start text-2xl md:text-5xl font-bold w-1/2 my-10">
+            Benefits of a Custom Website
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 me-7">
+            {benefitsData.map((benefit, index) => (
+              <div className="rounded-xl bg-gradient-to-r from-[#dc1e5e] to-black border border-[#dc1e5e]">
+                <BenefitItem key={index} {...benefit} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

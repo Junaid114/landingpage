@@ -1,10 +1,11 @@
-
 import React from "react";
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header
+      className={`flex flex-wrap justify-between flex-col gap-9  items-center md:flex-row ${styles.header} border-0`}
+    >
       <div className={styles.logo}>
         <img
           loading="lazy"

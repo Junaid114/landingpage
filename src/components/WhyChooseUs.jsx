@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import styles from "./WhyChooseUs.module.css";
 // import Line from "./verticalline/Line";
@@ -41,11 +40,11 @@
 
 //   return (
 //     <section className={styles.whyChooseUs}  style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}}>
-    
+
 //       <div className={styles.sectionHeader}>
-     
+
 //         <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
-        
+
 //         <h3 className={styles.sectionSubtitle}>
 //           Why We Use Next.js and How It Benefits You
 //         </h3>
@@ -79,15 +78,9 @@
 
 // export default WhyChooseUs;
 
-
-
-
-
-
-
-
 import React from "react";
 import { Box, Typography, Grid, ImageList, ImageListItem } from "@mui/material";
+import Line from "./verticalline/Line";
 
 const WhyChooseUs = () => {
   const brands = [
@@ -119,9 +112,18 @@ const WhyChooseUs = () => {
     //   name: "Ticketmaster",
     //   logo: "https://cdn.builder.io/api/v1/image/assets/TEMP/a3936f800aa7e41ccd50ace3d1446188f2c534da6724b6b4c7af276caf3de048?placeholderIfAbsent=true&apiKey=9017a87510fe476c98d2c8c4751e147a",
     // },
-    { name: "Binance", logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png" },
-    { name: "Spotify", logo: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" },
-    { name: "ChatGPT", logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" },
+    {
+      name: "Binance",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png",
+    },
+    {
+      name: "Spotify",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg",
+    },
+    {
+      name: "ChatGPT",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    },
   ];
 
   return (
@@ -134,52 +136,65 @@ const WhyChooseUs = () => {
         color: "#fff",
       }}
     >
-      <Typography variant="h2" gutterBottom>
-        Why Choose Us?
-      </Typography>
-      <Typography variant="h5" gutterBottom>
-        Why We Use Next.js and How It Benefits You
-      </Typography>
-      <Typography variant="body1" sx={{ marginBottom: "20px" }}>
-        For us, it's all about quality and customization. We build websites with
-        Next.js, a leading framework trusted by major brands such as:
-      </Typography>
+      <div className="flex gap-7">
+        <div className="h-[500px]">
+          {" "}
+          <Line />
+        </div>
+        <div className="">
+          <div className="flex flex-col gap-2">
+            <h1 className=" border border-[#dc1e5e] text-base text-center w-40 p-2 rounded-3xl">
+              Why Choose Us?
+            </h1>
 
-      <ImageList
-        cols={5}
-        gap={15}
-        sx={{
-          justifyContent: "center",
-          marginBottom: "20px",
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
-        {brands.map((brand, index) => (
-          <ImageListItem key={index} sx={{ width: "150px", height: "auto" }}>
-            <img
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              loading="lazy"
-              style={{
-                width: "100%",
-                objectFit: "contain",
-              }}
-            />
-            <Typography
-              variant="body2"
-              sx={{ marginTop: "8px", color: "#fff", textAlign: "center" }}
-            >
-              {brand.name}
-            </Typography>
-          </ImageListItem>
-        ))}
-      </ImageList>
+            <h1 className="p-0 text-start text-3xl md:text-5xl font-bold w-1/2 my-10">
+              Why We Use Next.js and How It Benefits You
+            </h1>
 
-      <Typography variant="h6">
-        Elevate your online presence with the same technology powering the
-        world's biggest brands.
-      </Typography>
+            <p className="text-slate-500 w-1/2 text-start">
+              {" "}
+              For us, it's all about quality and customization. We build
+              websites with Next.js, a leading framework trusted by major brands
+              such as:
+            </p>
+          </div>
+
+          {/* <ImageList className="flex flex-wrap"> */}
+          <ul className="flex flex-wrap gap-10">
+            {brands.map((brand, index) => (
+              <ImageListItem
+                key={index}
+                sx={{ width: "90px", height: "auto" }}
+                className="flex"
+              >
+                <img
+                  src={brand.logo}
+                  alt={`${brand.name} logo`}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{ marginTop: "8px", color: "#fff", textAlign: "center" }}
+                >
+                  {brand.name}
+                </Typography>
+              </ImageListItem>
+            ))}
+          </ul>
+          {/* </ImageList> */}
+
+          <Typography variant="h6">
+            <h6 className="text-sm md:text-base mt-16 bg-[#dc1e5e] px-7 text-white rounded-3xl text-start w-fit">
+              Elevate your online presence with the same technology powering the
+              world's biggest brands.
+            </h6>
+          </Typography>
+        </div>
+      </div>
     </Box>
   );
 };

@@ -4,12 +4,11 @@
 // import AwesomeSlider from 'react-awesome-slider';
 // import 'react-awesome-slider/dist/styles.css';
 
-
 // const Work = () => {
 //   return (
 //     <>
 //         <h2 >Our Work</h2>
-//     <div className='work'>  
+//     <div className='work'>
 //     <AwesomeSlider style={{
 //       display: 'flex',
 //     width: '90%',
@@ -31,50 +30,42 @@
 
 // export default Work
 
-
-
-
-
-
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
-import image from '../assets/image.png'; // Import your image
+import React from "react";
+import { Box, Typography } from "@mui/material";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import image from "../assets/image.png"; // Import your image
 
 const Work = () => {
   return (
     <>
-      <Typography
-        variant="h2"
-        sx={{
-          textAlign: 'center',
-          marginBottom: '20px',
-          fontWeight: 'bold',
-          color: '#fff',
-        }}
-      >
+      <h1 className="p-0 text-start text-3xl md:text-6xl font-bold w-full ps-20">
         Our Work
-      </Typography>
+      </h1>
 
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          marginTop: '20px',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          marginTop: "20px",
         }}
       >
         <AwesomeSlider
           style={{
-            width: '90%',
-            border: '8px solid #dc1e5e',
-            borderRadius: '20px',
-            objectFit: 'cover',
+            width: "90%",
+            border: "8px solid #dc1e5e",
+            borderRadius: "20px",
+            objectFit: "cover",
           }}
         >
-          <Box component="img" src={image} alt="Our Work Image" sx={{ width: '100%', borderRadius: '12px' }} />
+          <Box
+            component="img"
+            src={image}
+            alt="Our Work Image"
+            sx={{ width: "100%", borderRadius: "12px" }}
+          />
         </AwesomeSlider>
       </Box>
     </>

@@ -6,29 +6,37 @@ import styles from "./Services.module.css";
 import Line from "./verticalline/Line";
 
 const ServiceCard = ({ icon, price, title, description, features }) => (
-  <div className={styles.serviceCard} style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}}>
+  <div
+    className="border border-slate-500 rounded-3xl p-10 gap-5 flex flex-col items-center"
+    style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
+  >
     <img
       loading="lazy"
       src={icon}
       alt={`${title} icon`}
-      className={styles.serviceIcon}
+      className=" w-20 h-20"
     />
-    <div className={styles.serviceInfo}>
-      <div className={styles.servicePrice}>{price}</div>
-      <h3 className={styles.serviceTitle}>{title}</h3>
-      <p className={styles.serviceDescription}>{description}</p>
+
+    <div className="flex flex-col items-center">
+      <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-center p-0">
+        {price}
+      </h1>
+      <h3 className="text-lg sm:text-xl md:text-2xl ">{title}</h3>
+      <p className="text-slate-500">{description}</p>
     </div>
-    <button className={styles.viewServicesButton}>View Our Services</button>
-    <ul className={styles.featureList}>
+    <button className="border border-[#dc1e5e] w-full rounded-3xl  p-3">
+      View Our Services
+    </button>
+    <ul className="flex flex-col gap-4 md:gap-6">
       {features.map((feature, index) => (
-        <li key={index} className={styles.featureItem}>
+        <li key={index} className="flex gap-3 uppercase">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef1c968292488f7f43c81b3b88a4da951c63c4a34cd1ce16916abdefa51d1eb0?placeholderIfAbsent=true&apiKey=9017a87510fe476c98d2c8c4751e147a"
             alt=""
             className={styles.featureIcon}
           />
-          <span>{feature}</span>
+          <span className="sm:text-sm md:text-base">{feature}</span>
         </li>
       ))}
     </ul>
@@ -76,15 +84,22 @@ const Services = () => {
   ];
 
   return (
-    <section className={styles.services}  style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}}>
-      <div style={{position: 'absolute', marginLeft:'80px',height: '100%',marginTop:'30px'}}>
-       <Line/>
-       </div>
-      <h2 className={styles.sectionTitle}>Our Services</h2>
-      <div className={styles.serviceGrid}>
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
+    <section
+      className="my-20 text-white"
+      style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
+    >
+      <div className="flex gap-7">
+        <Line />
+        <div>
+          <h1 className="p-0 text-start text-2xl md:text-6xl font-bold w-1/2  my-10">
+            Our Services
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 me-7">
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

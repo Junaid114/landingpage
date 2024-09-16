@@ -6,8 +6,11 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerContent}>
+    <footer
+      className="border-t p-4"
+      style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}
+    >
+      <div className="flex flex-col md:flex-row justify-between items-center  ">
         <div className={styles.logo}>
           <img
             loading="lazy"

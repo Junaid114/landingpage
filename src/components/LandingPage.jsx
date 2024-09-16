@@ -11,22 +11,21 @@ import Services from "./Services";
 import ContactForm from "./ContactForm";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
-import styles from "./LandingPage.module.css";
 import Work from "./Work";
 import ClientApproach from "./ClientApproach/ClientApproach";
 
 const LandingPage = () => {
   return (
-    <div className={styles.landingPage}>
+    <div className="max-w-full">
       <Header />
-      <main  style={{ backgroundColor: 'rgba(21, 7, 12, 1)'}}>
+      <main style={{ backgroundColor: "rgba(21, 7, 12, 1)" }}>
         <Hero />
-        <Work/>
+        <Work />
         <WhyChooseUs />
         <Benefits />
         <Process />
         <Services />
-        <ClientApproach/>
+        <ClientApproach />
         <ContactForm />
         <FAQ />
       </main>

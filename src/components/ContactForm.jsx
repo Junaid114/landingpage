@@ -6,20 +6,20 @@ import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
   return (
-    <section className={styles.contactSection} >
+    <section className="grid grid-cols-1 md:grid-cols-2 bg-[#2e0a16] rounded-2xl p-6 mx-4">
       <div className={styles.formWrapper}>
         <h2 className={styles.formHeading}>Contact Us</h2>
         <form className={styles.form}>
-          <div className={styles.names}>
+          <div className="flex gap-5 flex-col md:flex-row">
             <input
               type="text"
-              className={styles.field}
+              className="w-full p-4 rounded-md  bg-[#391622] border border-[#60454e]"
               placeholder="First Name"
               aria-label="First Name"
             />
             <input
               type="text"
-              className={styles.field}
+              className="w-full p-4 rounded-md  bg-[#391622] border border-[#60454e]"
               placeholder="Last Name"
               aria-label="Last Name"
             />
